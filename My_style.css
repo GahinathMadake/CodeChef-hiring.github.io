@@ -86,7 +86,7 @@ body{
 }
 .typing_text .text{
     position: relative;
-    color: blue;               /* colour for second text */
+    color: rgb(91, 91, 225);               /* colour for second text */
     font-size: 2vw;
     font-weight: 600;
 }
@@ -118,8 +118,6 @@ body{
      }
 }
 /* Typing Animation Ends*/
-
-
 
 
 
@@ -212,7 +210,7 @@ body{
     width: 100%;
     height: 4px;
     border-radius: 1px;
-    background-color: blue;
+    background-color: rgb(228, 177, 46);
     left: 0;
     bottom: 15px;
   }
@@ -224,7 +222,7 @@ body{
     position: absolute;
     left: 25%;
     bottom: 5px;
-    background-color: blue;
+    background-color: rgb(228, 177, 46);
   }
   #our_team  .head div .first{
     margin-right: 1vw;
@@ -419,7 +417,7 @@ body{
     padding: 5px 10px 10px 10px;
 }
 #team .Team_members .border_box .inner_box .team_short h2{
-    font-size: 1.5vw;
+    font-size: 18px;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -457,6 +455,16 @@ body{
 
 
 
+
+/* Responsiveness for About*/
+@media screen and (max-width: 830px) {
+    #our_team .head div::before{
+        height: 2px;
+    }
+    #our_team .head div::after{
+        height: 2px;
+    }
+}
 
 
 
