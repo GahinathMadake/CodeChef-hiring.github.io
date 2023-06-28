@@ -1248,7 +1248,7 @@ nav a {
     }
 
     .nav-links .menu .nav_icon{
-        /* visibility: hidden; */
+        visibility: hidden;
     }
 
     /* LOGO */
