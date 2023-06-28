@@ -1464,13 +1464,13 @@ nav a {
   display: contents;
  }
  .second_div{
-    width: 180px;
+    width: 200px;
  }
  .second_div li{
     padding: 5px 0 5px 15px;
  }
  .second_div a{
-    font-size: 18px;
+    font-size: 25px;
  }
 }
 
