@@ -899,6 +899,15 @@ body{
   }
   
 
+  @media screen and (max-width:800px){
+    .outer_event{
+        margin-top: 60px;
+    }
+    .outer_event .head .heading{
+        font-size: 30px;
+    }
+  }
+
 /* Event section ends */
 
 
