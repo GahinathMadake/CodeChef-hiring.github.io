@@ -173,8 +173,9 @@ body{
 }
 
 .outer_about .wrapper_about .about_img .typing{
-    width:90%;
+    width:95%;
     height:4vw;
+    margin: 20px 0 10px 0;
 }
 
 .outer_about .wrapper_about .about_content{
@@ -484,7 +485,7 @@ body{
         height: 2px;
     }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
     #our_team  .head div .first{
         font-size: 20px;
       }
@@ -492,7 +493,14 @@ body{
         font-size: 20px;
     }
      .typing_text .text{
-        font-size: 8px;
+        font-size: 9px;
+    }
+    .outer_about .wrapper_about .about_img .codeman{
+        width: 150px;
+        height: 150px;
+    }
+    .outer_about .wrapper_about .about_img .typing{
+        margin: 10px 0 5px 0;
     }
 }
 
@@ -576,8 +584,9 @@ body{
     height: 100%;
 }
 .outer_perk .perks_body .perk_content .Heading_name{
-    font-size: 25px;
+    font-size: 27px;
     font-weight: 700;
+    color: rgb(246, 227, 199);
 }
 .outer_perk .perks_body .perk_content .Heading_name span{
     padding: 0 15px 0 0;
@@ -615,6 +624,8 @@ body{
 /* Animation Effects for image hover */
 .card .caption{
     position: relative;
+    top: 10px;
+    font-size: 20px;
     text-align: center;
     opacity: 0;
     bottom: 0;
@@ -747,6 +758,9 @@ body{
     }
     #form_redirect .apply .button .apply_button:hover{
         border: 1px solid rgb(186, 224, 59);
+    }
+    .card .caption{
+        font-size: 14px;
     }
 }
 
