@@ -131,7 +131,7 @@ body{
 /* Main about part */
 .outer_about{
     width: 100%;
-    margin-top: 5vw;
+    margin-top: 100px;
     height: auto;
     overflow-y: hidden;
 }
@@ -147,7 +147,9 @@ body{
     text-align: center;
     font-size: 5vw;
 }
-
+.outer_about .wrapper_about .about_slogan h2{
+    font-size: 30px;
+}
 .outer_about .wrapper_about{
     width: 100%;
     height: auto;
@@ -180,7 +182,9 @@ body{
     height: auto;
     margin-top: 1.5vw;
 }
-
+.outer_about .wrapper_about .about_content .about_para{
+    font-size: 20px;
+} 
 
 
 
@@ -458,11 +462,37 @@ body{
 
 /* Responsiveness for About*/
 @media screen and (max-width: 830px) {
+    .outer_about{
+        margin-top: 60px;
+    }
+    .outer_about .head .heading{
+        font-size: 30px;
+    }
+
+    .outer_about .wrapper_about .about_slogan h2{
+        font-size: 16px;
+    }
+
+    .outer_about .wrapper_about .about_content .about_para{
+        font-size: 10px;
+    }
+
     #our_team .head div::before{
         height: 2px;
     }
     #our_team .head div::after{
         height: 2px;
+    }
+}
+@media screen and (max-width: 400px){
+    #our_team  .head div .first{
+        font-size: 20px;
+      }
+    #our_team  .head div .second{
+        font-size: 20px;
+    }
+     .typing_text .text{
+        font-size: 8px;
     }
 }
 
@@ -483,7 +513,7 @@ body{
 .outer_perk{
     width: 100%;
     height: auto;
-    margin-top: 5vw;
+    margin-top: 100px;
     padding-bottom: 3vw;
     /* background-color: #201e1e;
     box-shadow: 0 0 15px #444343;
@@ -515,10 +545,13 @@ body{
     /* margin: 1vw; */
     display: flex;
     flex-wrap: wrap;
-    margin-top: 6vw;
+    margin-top: 60px;
     justify-content: center;
     align-items: center;
     gap: 5vw;
+}
+.outer_perk .perks_body .first_perks{
+    flex-wrap: wrap-reverse;
 }
 
 /* Design for img/figure division starts*/
@@ -533,7 +566,7 @@ body{
 .outer_perk .perks_body .perks .card .perks_img{
     width: 100%;
     height: 100%;
-    border-radius: 1vw;
+    border-radius: 10px;
 }
 /* Design for img/figure division ends*/
 
@@ -542,23 +575,25 @@ body{
     width: 45%;
     height: 100%;
 }
-.outer_perk .perks_body .perk_content .number{
-    width: 2.5vw;
-    height:2.5vw;
-    position: absolute;
-    display:inline;
-}
 .outer_perk .perks_body .perk_content .Heading_name{
-    font-size: 2vw;
-    margin-left: 3.1vw;
+    font-size: 25px;
     font-weight: 700;
 }
-
+.outer_perk .perks_body .perk_content .Heading_name span{
+    padding: 0 15px 0 0;
+    height: auto;
+    /* border: 2px solid white; */
+    /* visibility: hidden; */
+}
+.outer_perk .perks_body .perk_content p {
+    font-size: 18px;
+}
 .outer_perk .perks_body .perk_content p .list{
     position: relative;
     margin-left: 2vw;
 }
 .list li{
+    font-size: 18px;
     list-style: none;
 }
 .list li::before{
@@ -571,6 +606,7 @@ body{
 }
 
 .slogan{
+    font-size: 24px;
     margin: 1vw 0px;
     text-align: center;
 }
@@ -622,29 +658,32 @@ body{
 
 #form_redirect .apply .apply_para{
     width:80%;
+    font-size: 20px;
     height: auto;
 }
 
 #form_redirect .apply #apply_info{
     width: 90%;
     height: auto;
-    color: #0033f3;
+    font-size: 20px;
+    color: #5173ec;
     margin: 2vw 0 2vw;
 }
 #form_redirect .apply .button{
-    width: 24vw;
+    width: auto;
     height: auto;
     padding: 2vw;
 }
 #form_redirect .apply .button .apply_button{
-    width: 20vw;
-    height: 4vw;
+    width: auto;
+    height: auto;
+    padding: 5px 40px 6px 50px;
     border-style: none;
     border-radius: 1vw;
-    border: 1px solid rgb(205, 244, 77);
-    background-color: #3a5ee1;
+    border: 2px solid rgb(205, 244, 77);
+    background-color: #5072eb;
     text-align: center;
-    font-size: 2vw;
+    font-size: 20px;
 }
 #form_redirect .apply .button .apply_button:hover{
     border: 2px solid rgb(186, 224, 59);
@@ -654,9 +693,66 @@ body{
     color: black;
     transition: 1s;
 }
-
 /* Redirect Content part ends */
 /* Design for Perks section ends*/
+
+
+
+/* responsivness */
+@media screen and (max-width: 830px){
+    .outer_perk{
+        margin-top: 60px;
+    }
+    .outer_perk .head .heading{
+        font-size: 30px;
+    }
+
+}
+@media screen and (max-width: 500px){
+    .outer_perk .perks_body .perks .card{
+        width: 280px;
+    }
+    .outer_perk .perks_body .perk_content{
+        width: 80%;
+    }
+    .outer_perk .perks_body .perk_content .number{
+        display: none;
+    }
+        .outer_perk .perks_body .perk_content .Heading_name{
+            font-size: 14px;
+        }
+    .outer_perk .perks_body .perk_content .Heading_name span{
+        visibility: visible;
+    }
+    .outer_perk .perks_body .perk_content p{
+        font-size: 10px;
+    }
+    .list li{
+        font-size: 10px;
+    }
+    .slogan{
+        font-size: 12px;
+    }
+
+    #form_redirect .apply .apply_para{
+        font-size: 9px;
+    }
+    #form_redirect .apply #apply_info{
+        font-size: 9px;
+    }
+    #form_redirect .apply .button .apply_button{
+        font-size: 9px;
+        border: 1px solid rgb(186, 224, 59);
+        padding: 5px 30px 5px 30px;
+    }
+    #form_redirect .apply .button .apply_button:hover{
+        border: 1px solid rgb(186, 224, 59);
+    }
+}
+
+
+
+
 
 
 
@@ -1064,6 +1160,9 @@ body{
 @media screen and (max-width: 800px){
     .water_level_effect h2:nth-child(1){
         -webkit-text-stroke: 0.2px black;
+    }
+    .Contact_Us .head .heading{
+        font-size: 30px;
     }
 }
 
