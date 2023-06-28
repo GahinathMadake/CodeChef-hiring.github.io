@@ -1061,6 +1061,12 @@ body{
 
 
 
+@media screen and (max-width: 800px){
+    .water_level_effect h2:nth-child(1){
+        -webkit-text-stroke: 0.2px black;
+    }
+}
+
 
 
 
