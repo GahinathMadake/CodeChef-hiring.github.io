@@ -1088,6 +1088,7 @@ nav a {
 
 .logo_MitAOE_info{
   position: absolute;
+  font-size: 20px;
   left: 80px;
 }
 
@@ -1096,6 +1097,7 @@ nav a {
     }
     /* NAVBAR STYLING STARTS */
 .navbar {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1106,6 +1108,10 @@ nav a {
 
     .nav-links a {
     color: #fff;
+    }
+
+    .nav-links .menu .nav_icon{
+        visibility: hidden;
     }
 
     /* LOGO */
@@ -1180,6 +1186,7 @@ nav a {
         font-size:45px;
         padding: 10px 10px;
         margin: 10px 10px;
+        /* border: 2px solid white; */
       }
 
       .typing-demo1{
@@ -1257,7 +1264,7 @@ nav a {
 
 @media screen and (max-width: 900px) {
   .typing{
-    width: 500px;
+    width: 100%;
   }
   .typing-demo{
     width: auto;
@@ -1297,6 +1304,12 @@ nav a {
   }
   .navbar a{
     padding: 0px;
+  }
+  .nav-links .menu .links{
+    display: none;
+  }
+  .nav-links .menu .nav_icon{
+    visibility: visible;
   }
 }
 
