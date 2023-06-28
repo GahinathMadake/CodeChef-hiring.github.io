@@ -1248,7 +1248,7 @@ nav a {
     }
 
     .nav-links .menu .nav_icon{
-        visibility: hidden;
+        /* visibility: hidden; */
     }
 
     /* LOGO */
@@ -1279,19 +1279,21 @@ nav a {
 
       .second_div{
         border: solid white 1px;
-        width: 130px;
+        width: 225px;
         border-radius: 10px;
-        background-color: rgba(0, 0, 0, 0.419);
+        padding: 10px 0 10px 5px;
+        background-color: rgba(0, 0, 0, 0.463);
         position: absolute;
-        right: 20px;
+        right: 25px;
         top: 80px;
         display: none;
       }
       .second_div li{
-        padding: 5px 5px 5px 5px;
+        padding: 8px 10px 8px 15px;
       }
       .second_div a{
         color: white;
+        font-size: 20px;
         text-decoration: none;
       }
 
@@ -1460,6 +1462,15 @@ nav a {
  }
  .nav_icon{
   display: contents;
+ }
+ .second_div{
+    width: 180px;
+ }
+ .second_div li{
+    padding: 5px 0 5px 15px;
+ }
+ .second_div a{
+    font-size: 18px;
  }
 }
 
