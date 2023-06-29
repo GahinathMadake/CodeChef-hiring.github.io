@@ -1432,6 +1432,9 @@ nav a {
     top: 300px;
     left: 100px;
   }
+  .logo_MitAOE_info{
+    font-size: 13px;
+  }
 }
 
 @media screen and (max-width: 830px)   {
