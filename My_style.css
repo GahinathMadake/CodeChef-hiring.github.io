@@ -1250,6 +1250,7 @@ nav a {
     /* NAVBAR STYLING STARTS */
 .navbar {
     width: 100%;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1275,7 +1276,7 @@ nav a {
     .menu {
     display: flex;
     gap: 1em;
-    font-size: 18px;
+    font-size: 20px;
     }
 
     .menu li:hover {
@@ -1295,13 +1296,14 @@ nav a {
       .second_div{
         border: solid white 1px;
         width: 225px;
+        position: absolute;
+        top: 90px;
+        right: 25px;
         border-radius: 10px;
         padding: 10px 0 10px 5px;
-        background-color: rgba(0, 0, 0, 0.463);
-        position: absolute;
-        right: 25px;
-        top: 80px;
+        background-color: rgb(21, 32, 80);
         display: none;
+        z-index: 1000;
       }
       .second_div li{
         padding: 8px 10px 8px 15px;
@@ -1411,9 +1413,9 @@ nav a {
  }
 
 @media screen and (max-width: 1200px) {
-  .navbar li{
+  /* .navbar li{
     padding: 5px;
-  }
+  } */
 }
 
 @media screen and (max-width: 900px) {
@@ -1453,13 +1455,7 @@ nav a {
 }
 
 @media screen and (max-width: 830px)   {
-  .navbar li{
-    padding: 0px;
-  }
   .navbar ul{
-    padding: 0px;
-  }
-  .navbar a{
     padding: 0px;
   }
   .nav-links .menu .links{
@@ -1481,16 +1477,6 @@ nav a {
  .nav_icon{
   display: contents;
  }
- .second_div{
-    width: 180px;
- }
- .second_div li{
-    padding: 5px 0 5px 15px;
- }
- .second_div a{
-    font-size: 18px;
- }
-}
 
 @media screen and (max-width: 550px) {
   .codechef_div{
