@@ -18,6 +18,19 @@ body{
         overflow-x: hidden;
     }
 
+    .head{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+     .head .heading{
+        text-align: center;
+        font-size: 3rem;
+    }
+
+
 /* Underline Effects for Sections heading Starts */
 .hover-underline-animation {
     display: inline-block;
@@ -78,45 +91,46 @@ body{
 
 
 /* Design for About Starts*/
+
 /* Typing Animation Starts*/
-.typing_text{
-    position: absolute;
-    left: 15vw;
-    overflow-x: hidden;
-}
-.typing_text .text{
-    position: relative;
-    color: rgb(91, 91, 225);               /* colour for second text */
-    font-size: 2vw;
-    font-weight: 600;
-}
-
-.typing_text .first_text{
-    color: azure;
-}
-
-.second_text:before{
-    content: '';
-    position: absolute;
-    top: 0px;
-    left:0px;
-    height: 100%;
+.container{
     width: 100%;
-    background-color: rgb(18, 17, 18);  /*  Similar to the real background*/
-    border-left: 2px solid blue;
-    animation: animate_typing 10s steps(35) infinite;
 }
-@keyframes animate_typing{
-    0%,5%{
-        left: 0%;
-     }
-     50%,60%{
-        left: calc(100% + 0.5vw);
-     }
-     98%, 100%{
-        left: 0%;
-     }
+.container p{
+    width: 80%;
+    margin: 5px auto;
+    text-align: left;
+    font-size: 25px;
+    font-weight: 800;
 }
+.container p .typed-text{
+    color: rgb(140, 140, 244);
+    font-size: 25px;
+    font-weight: 800;
+}
+.container p .TypeCursor{
+    width: 3px;
+    border-left: 3px solid red;
+    height: 100%;
+    position: relative;
+    left: 6px;
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    0%{
+        border-left: 3px solid red;
+    }
+    50%{
+        border-left: 3px solid red;
+    }
+    55%{
+        border-left: 3px solid red;
+    }
+    100%{
+        border-left: none;
+    }
+}
+
 /* Typing Animation Ends*/
 
 
@@ -134,18 +148,6 @@ body{
     margin-top: 100px;
     height: auto;
     overflow-y: hidden;
-}
-.outer_about .head{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-.outer_about .head .heading{
-    text-align: center;
-    font-size: 5vw;
 }
 .outer_about .wrapper_about .about_slogan h2{
     font-size: 30px;
@@ -184,7 +186,7 @@ body{
     margin-top: 1.5vw;
 }
 .outer_about .wrapper_about .about_content .about_para{
-    font-size: 20px;
+    font-size: 25px;
 } 
 
 
@@ -195,7 +197,7 @@ body{
     width: 100%;
     height: auto;
 }
-#our_team .head{
+#our_team .headt{
     width: 95%;
     margin: 3vw 0 2vw 0;
     padding: 10px;
@@ -203,13 +205,13 @@ body{
     justify-content: center;
     align-items: center;
   }
-  #our_team  .head div{
+  #our_team  .headt div{
     padding-bottom:  15px;
     text-align: center;
     font-weight: bold; 
     position: relative;
   }
-  #our_team .head div::before{
+  #our_team .headt div::before{
     content: '';
     position: absolute;
     width: 100%;
@@ -219,7 +221,7 @@ body{
     left: 0;
     bottom: 15px;
   }
-  #our_team .head div::after{
+  #our_team .headt div::after{
     content: '';
     width: 50%;
     height: 4px;
@@ -229,12 +231,12 @@ body{
     bottom: 5px;
     background-color: rgb(67, 131, 243);
   }
-  #our_team  .head div .first{
+  #our_team  .headt div .first{
     margin-right: 1vw;
     font-size: 4vw;
     color: rgb(252, 226, 226);
   }
-  #our_team .head div .second{
+  #our_team .headt div .second{
     margin-left: 1vw;
     font-size: 4vw;
     color: rgb(251, 60, 60);
@@ -440,7 +442,7 @@ body{
 #team .Team_members .border_box .inner_box .team_short div span{
     width: 40px;
     height: 40px;
-    border-radius: 20px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -451,8 +453,8 @@ body{
     box-shadow: 0 0 10px rgb(66, 203, 66);
 }
 #team .Team_members .border_box .inner_box .team_short div span img{
-    margin-top: 5px;
-    width: 20px;
+    margin-top: 10px;
+    width: 25px;
 }
 /* Team section ends */
 
@@ -475,7 +477,7 @@ body{
     }
 
     .outer_about .wrapper_about .about_content .about_para{
-        font-size: 10px;
+        font-size: 20px;
     }
 
     #our_team .head div::before{
@@ -485,16 +487,19 @@ body{
         height: 2px;
         bottom: 9px;
     }
+    .container p, .container p .typed-text{
+        font-size: 20px;
+    }
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
     #our_team  .head div .first{
         font-size: 20px;
-      }
+    }
     #our_team  .head div .second{
         font-size: 20px;
     }
      .typing_text .text{
-        font-size: 9px;
+        font-size: 12px;
     }
     .outer_about .wrapper_about .about_img .codeman{
         width: 150px;
@@ -502,6 +507,12 @@ body{
     }
     .outer_about .wrapper_about .about_img .typing{
         margin: 10px 0 5px 0;
+    }
+    .outer_about .wrapper_about .about_content .about_para{
+        font-size: 16px;
+    }
+    .container p, .container p .typed-text{
+        font-size: 18px;
     }
 }
 
@@ -522,25 +533,15 @@ body{
 .outer_perk{
     width: 100%;
     height: auto;
-    margin-top: 100px;
+    margin-top: 20px;
+    padding-top: 50px;
     padding-bottom: 3vw;
-    /* background-color: #201e1e;
+    background-color: #161515;
     box-shadow: 0 0 15px #444343;
-    z-index: -2; */
+    z-index: -2;
 }
 
-.outer_perk .head{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
 
-.outer_perk .head .heading{
-    text-align: center;
-    font-size: 5vw;
-}
 /* Design for heading section ends*/
 
 /* design for perks boxes start */
@@ -565,7 +566,7 @@ body{
 
 /* Design for img/figure division starts*/
 .outer_perk .perks_body .perks .card{
-    width: 30%;
+    width: 400px;
     /* height: 100%; */
     padding: 10px;
     position: relative;
@@ -582,28 +583,27 @@ body{
 /* Design for content division starts*/
 .outer_perk .perks_body .perk_content{
     width: 45%;
+    min-width: 350px;
     height: 100%;
 }
 .outer_perk .perks_body .perk_content .Heading_name{
-    font-size: 27px;
+    font-size: 28px;
     font-weight: 700;
     color: rgb(246, 227, 199);
 }
 .outer_perk .perks_body .perk_content .Heading_name span{
     padding: 0 15px 0 0;
     height: auto;
-    /* border: 2px solid white; */
-    /* visibility: hidden; */
 }
 .outer_perk .perks_body .perk_content p {
-    font-size: 18px;
+    font-size: 23px;
 }
 .outer_perk .perks_body .perk_content p .list{
     position: relative;
     margin-left: 2vw;
 }
 .list li{
-    font-size: 18px;
+    font-size: 25px;
     list-style: none;
 }
 .list li::before{
@@ -621,12 +621,11 @@ body{
     text-align: center;
 }
 
-/* design for perks boxes start */
 /* Animation Effects for image hover */
 .card .caption{
     position: relative;
     top: 10px;
-    font-size: 20px;
+    font-size: 23px;
     text-align: center;
     opacity: 0;
     bottom: 0;
@@ -670,14 +669,14 @@ body{
 
 #form_redirect .apply .apply_para{
     width:80%;
-    font-size: 20px;
+    font-size: 23px;
     height: auto;
 }
 
 #form_redirect .apply #apply_info{
     width: 90%;
     height: auto;
-    font-size: 20px;
+    font-size: 23px;
     color: #5173ec;
     margin: 2vw 0 2vw;
 }
@@ -687,23 +686,31 @@ body{
     padding: 2vw;
 }
 #form_redirect .apply .button .apply_button{
-    width: auto;
-    height: auto;
-    padding: 5px 40px 6px 50px;
-    border-style: none;
-    border-radius: 1vw;
-    border: 2px solid rgb(205, 244, 77);
-    background-color: #5072eb;
-    text-align: center;
-    font-size: 20px;
+border: 1px solid rgb(146, 238, 100);
+position: relative;
+border-radius: 3px;
+padding: 7px 20px;
+font-size: 20px;
+font-weight: 900;
+text-decoration: none;
+background: rgb(154, 154, 245);
+z-index: 1;
 }
-#form_redirect .apply .button .apply_button:hover{
-    border: 2px solid rgb(186, 224, 59);
-    box-shadow: 0 0 15px rgb(186, 224, 59);
-    background-color: #637dda;
-    transform: scale(1.05);
-    color: black;
-    transition: 1s;
+#form_redirect .apply .button .apply_button::before{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: -1;
+background-color: rgb(233, 82, 82);
+transform: scaleX(0);
+transform-origin: left;
+transition: transform 0.8s linear;
+}
+#form_redirect .apply .button .apply_button:hover::before{
+    transform: scaleX(1);
 }
 /* Redirect Content part ends */
 /* Design for Perks section ends*/
@@ -711,57 +718,52 @@ body{
 
 
 /* responsivness */
-@media screen and (max-width: 830px){
+@media screen and (max-width: 900px){
     .outer_perk{
         margin-top: 60px;
     }
     .outer_perk .head .heading{
         font-size: 30px;
     }
+    .outer_perk .perks_body .perk_content{
+        width: 500px;
+    }
+    .outer_perk .perks_body .perk_content p,.list li{
+        font-size: 20px;
+    }
 
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
     .outer_perk .perks_body .perks .card{
-        width: 280px;
+        width: 350px;
     }
     .outer_perk .perks_body .perk_content{
-        width: 80%;
+        width: 300px;
     }
     .outer_perk .perks_body .perk_content .number{
         display: none;
     }
         .outer_perk .perks_body .perk_content .Heading_name{
-            font-size: 14px;
+            font-size: 20px;
         }
     .outer_perk .perks_body .perk_content .Heading_name span{
         visibility: visible;
     }
-    .outer_perk .perks_body .perk_content p{
-        font-size: 10px;
-    }
-    .list li{
-        font-size: 10px;
+    .outer_perk .perks_body .perk_content p,.list li{
+        font-size: 16px;
     }
     .slogan{
-        font-size: 12px;
+        font-size: 20px;
     }
 
-    #form_redirect .apply .apply_para{
-        font-size: 9px;
-    }
-    #form_redirect .apply #apply_info{
-        font-size: 9px;
+    #form_redirect .apply .apply_para , #form_redirect .apply #apply_info{
+        font-size: 16px;
     }
     #form_redirect .apply .button .apply_button{
-        font-size: 9px;
-        border: 1px solid rgb(186, 224, 59);
-        padding: 5px 30px 5px 30px;
-    }
-    #form_redirect .apply .button .apply_button:hover{
-        border: 1px solid rgb(186, 224, 59);
+        font-size: 16px;
     }
     .card .caption{
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
@@ -780,19 +782,6 @@ body{
     margin-top: 5vw;
     height: auto;
     overflow-x: hidden;
-}
-.outer_event .head{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-.outer_event .head .heading{
-    width: auto;
-    text-align: center;
-    font-size: 5vw;
 }
 
 
@@ -1050,7 +1039,7 @@ body{
     align-items: center;
 }
 .outer_footer .about_codechef{
-    width: 45%;
+    width: 550px;
     height: auto;
     margin: 1vw;
     padding: 0.5;
@@ -1062,7 +1051,7 @@ body{
     height: auto;
 }
 .outer_footer .about_codechef #contact_codechef .codechef_logo{
-    width: 20vw;
+    width: 250px;
     height: auto;
     padding: 2vw 0 2vw;
 }
@@ -1074,7 +1063,7 @@ body{
 .outer_footer .about_codechef p{
     width: 100%;
     height: auto;
-    font-size: 1.5vw;
+    font-size: 23px;
     margin-bottom: 3vw;
 }
 
@@ -1084,7 +1073,7 @@ body{
     color: red;
     font-family: Lilita one;
     text-decoration: none;
-    font-size: 2vw;
+    font-size: 23px;
 }
 
 .outer_footer .about_codechef a:hover{
@@ -1100,7 +1089,6 @@ body{
 .outer_footer .about_codechef .contact_media .media{
     width: 100%;
     height: auto;
-    margin: 1vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -1109,13 +1097,13 @@ body{
 }
 
 .outer_footer .about_codechef .contact_media .media a{
-    width: 5vw;
-    height: 5vw;
+    display: inline-block;
+    width: auto;
 }
 .outer_footer .about_codechef .contact_media .media a .icons{
-    width: 4vw;
+    width: 50px;
     height: auto;
-    display: inline-block;
+    /* display: inline-block; */
 }
 .outer_footer .about_codechef .contact_media .media a .icons:hover{
     transform: scale(1.03);
@@ -1124,7 +1112,7 @@ body{
 
 /* Developers */
 .outer_footer .developers{
-    width: 45%;
+    width: 450px;
     height: auto;
     margin: 2vw;
     padding: 0.5;
@@ -1133,7 +1121,8 @@ body{
 .water_level_effect{
     position: relative;
     width: 100%;
-    height: 12vw;
+    height: 100px;
+    margin: 50px 0;
 }
 .water_level_effect h2{
     position: absolute;
@@ -1142,7 +1131,7 @@ body{
     height: 100%;
     /* color: #fff; */
     text-align: center;
-    font-size: 7vw;
+    font-size: 75px;
     font-family: sans-serif;
 }
 .water_level_effect h2:nth-child(1){
@@ -1163,9 +1152,12 @@ body{
     }
 }
 /*  Water level Effect ends */
-
+.outer_footer .developers span{
+    font-size: 23px;
+}
 .outer_footer .developers span .foot_link{
     text-decoration: none;
+    font-size: 23px;
     color: black;
     font-weight: 700;
 }
@@ -1181,12 +1173,35 @@ body{
 
 
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 900px){
     .water_level_effect h2:nth-child(1){
         -webkit-text-stroke: 0.2px black;
     }
     .Contact_Us .head .heading{
         font-size: 30px;
+    }
+    .outer_footer .about_codechef p,.outer_footer .about_codechef a{
+        font-size: 20px;
+    }
+    .outer_footer .developers span .foot_link, .outer_footer .developers span{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 600px){
+    .outer_footer .about_codechef p,.outer_footer .about_codechef a{
+        font-size: 16px;
+    }
+    .contact_media .media a .icons{
+        width: 40px;
+    }
+    .outer_footer .developers span .foot_link, .outer_footer .developers span{
+        font-size: 16px;
+    }
+    .outer_footer .about_codechef{
+        width: 350px;
+    }
+    .outer_footer .about_codechef #contact_codechef .codechef_logo{
+        width: 200px;
     }
 }
 
