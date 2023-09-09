@@ -480,10 +480,10 @@ body{
         font-size: 20px;
     }
 
-    #our_team .head div::before{
+    #our_team .headt div::before{
         height: 2px;
     }
-    #our_team .head div::after{
+    #our_team .headt div::after{
         height: 2px;
         bottom: 9px;
     }
@@ -492,10 +492,10 @@ body{
     }
 }
 @media screen and (max-width: 600px){
-    #our_team  .head div .first{
-        font-size: 20px;
+    #our_team  .headt div .first{
+        font-size: 23px;
     }
-    #our_team  .head div .second{
+    #our_team  .headt div .second{
         font-size: 20px;
     }
      .typing_text .text{
