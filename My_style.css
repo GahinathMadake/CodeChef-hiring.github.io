@@ -648,13 +648,12 @@ body{
 /* Redirect Content part starts */
 #form_redirect{
     width: 100vw;
-    height: auto;
 }
 #form_redirect .apply{
     width: 90vw;
     height: auto;
     border: 1px solid white;
-    margin: 5vw 1vw 3vw 2vw;
+    margin: 5vw auto 2vw;
     padding: 4vw 0vw 2vw 0vw;
     border-radius: 1vw;
 }
@@ -670,7 +669,9 @@ body{
 #form_redirect .apply .apply_para{
     width:80%;
     font-size: 23px;
+    margin: 0 auto;
     height: auto;
+    text-align: center;
 }
 
 #form_redirect .apply #apply_info{
@@ -678,15 +679,34 @@ body{
     height: auto;
     font-size: 23px;
     color: #5173ec;
-    margin: 2vw 0 2vw;
+    margin: 2vw auto 2vw;
+    text-align: center;
+}
+.apply .position{
+    width: 550px;
+    margin: 10px auto;
+    text-align: left;
+    font-size: 23px;
+}
+.apply .position ol{
+    width: 100%;
+    padding: 5px 0px 0 6vw;
+}
+.apply .position ol li{
+    font-size: 23px;
+}
+.apply .position span{
+    padding: 0 10px 0 0;
 }
 #form_redirect .apply .button{
-    width: auto;
-    height: auto;
+    width: 100%;
     padding: 2vw;
+    display: flex;
+    justify-content: center;
 }
 #form_redirect .apply .button .apply_button{
 border: 1px solid rgb(146, 238, 100);
+place-self: center;
 position: relative;
 border-radius: 3px;
 padding: 7px 20px;
@@ -728,9 +748,10 @@ transition: transform 0.8s linear;
     .outer_perk .perks_body .perk_content{
         width: 500px;
     }
-    .outer_perk .perks_body .perk_content p,.list li{
+    .outer_perk .perks_body .perk_content p,#form_redirect .apply .apply_para, .list li, .apply .position, .apply .position ol li{
         font-size: 20px;
     }
+    
 
 }
 @media screen and (max-width: 600px){
@@ -749,12 +770,16 @@ transition: transform 0.8s linear;
     .outer_perk .perks_body .perk_content .Heading_name span{
         visibility: visible;
     }
-    .outer_perk .perks_body .perk_content p,.list li{
+    .outer_perk .perks_body .perk_content p,.list li, .apply .position, .apply .position ol li{
         font-size: 16px;
     }
     .slogan{
         font-size: 20px;
     }
+    .apply .position{
+        width: 350px;
+    }
+    
 
     #form_redirect .apply .apply_para , #form_redirect .apply #apply_info{
         font-size: 16px;
@@ -1244,7 +1269,7 @@ nav a {
   left: 80px;
 }
 
-    li {
+.navbar li {
     list-style: none;
     }
     /* NAVBAR STYLING STARTS */
@@ -1477,6 +1502,7 @@ nav a {
  .nav_icon{
   display: contents;
  }
+}
 
 @media screen and (max-width: 550px) {
   .codechef_div{
@@ -1498,4 +1524,3 @@ nav a {
       font-weight: 900;
     }
 }
-/* HOME CSS Ends */
